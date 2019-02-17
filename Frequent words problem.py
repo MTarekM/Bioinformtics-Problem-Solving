@@ -1,7 +1,7 @@
 def freqw( str, int ):
     numb = {}
     for i in range(len(str)-int+1):
-        if s[i:i+int] not in numb:
+        if str[i:i+int] not in numb:
             numb[str[i:i+int]] = 0
         numb[str[i:i+int]] += 1
     maxim = max(numb.values())
