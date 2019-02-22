@@ -1,0 +1,16 @@
+def FrequencyMap(DNA, int):
+  
+    freq = {}
+    n = len(DNA)
+    for i in range(n-int+1):
+        Pattern = Text[i:i+int]
+        freq[Pattern] = 0
+        for i in range(n-int+1):
+            if (Pattern == Text[i:i+int]):
+                freq[Pattern]=freq[Pattern]+1
+    return freq
+
+DNA = 'AGCTACACGATTACACGTA'
+k = 3
+
+print(FrequencyMap(DNA, int))
