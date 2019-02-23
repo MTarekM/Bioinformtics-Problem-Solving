@@ -1,0 +1,23 @@
+# Copy your PatternCount function below here
+def patternCount(text, pattern):
+	count = 0
+	for i in range(len(text) - len(pattern)+1):
+		if (text[i:i+len(pattern)] == pattern):
+			count += 1
+	return count
+
+# On the following line, create a variable called Text that is equal to the oriC region from T petrophila
+
+text = 'AACTCTATACCTCCTTTTTGTCGAATTTGTGTGATTTATAGAGAAAATCTTATTAACTGAAACTAAAATGGTAGGTTTGGTGGTAGGTTTTGTGTACATTTTGTAGTATCTGATTTTTAATTACATACCGTATATTGTATTAAATTGACGAACAATTGCATGGAATTGAATATATGCAAAACAAACCTACCACCAAACTCTGTATTGACCATTTTAGGACAACTTCAGGGTGGTAGGTTTCTGAAGCTCTCATCAATAGACTATTTTAGTCTTTACAAACAATATTACCGTTCAGATTCAAGATTCTACAACGCTGTTTTAATGGGCGTTGCAGAAAACTTACCACCTAAAATCCAGTATCCAAGCCGATTTCAGAGAAACCTACCACTTACCTACCACTTACCTACCACCCGGGTGGTAAGTTGCAGACATTATTAAAAACCTCATCAGAAGCTTGTTCAAAAATTTCAATACTCGAAACCTACCACCTGCGTCCCCTATTATTTACTACTACTAATAATAGCAGTATAATTGATCTGA'
+# On the following line, create a variable called count_1 that is equal to the number of times
+# that "ATGATCAAG" occurs in Text.
+p1 = 'ATGATCAAG'
+# On the following line, create a variable called count_2 that is equal to the number of times
+# that "CTTGATCAT" occurs in Text. 
+p2 = 'CTTGATCAT'
+
+
+# Finally, print the sum of count_1 and count_2countp = "TGT"
+
+count_1 = print(patternCount(text,p1))
+count_2 = print(patternCount(text,p2))
