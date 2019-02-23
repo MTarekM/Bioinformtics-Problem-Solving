@@ -1,0 +1,22 @@
+# Input:  A DNA string Genome
+# Output: A list containing all integers i minimizing Skew(Prefix_i(Text)) over all values of i (from 0 to |Genome|)
+def MinimumSkew(Genome):
+    skew = [0]
+    for i in range(len(Genome)):
+        skew.append(skew[i] + {'A':0,'C':-1,'G':1,'T':0}[Genome[i]])
+    m = min(skew)
+    return [i for i in range(len(skew)) if skew[i] == m]
+
+# Input:  A String Genome
+# Output: SkewArray(Genome)
+# HINT:   This code should be taken from the last Code Challenge.
+def SkewArray(Genome):
+    skew = [0]
+    for i in range(len(Genome)):
+        skew.append(skew[i] + {'A':0,'C':-1,'G':1,'T':0}[Genome[i]])
+    m = min(skew)
+    return [i for i in range(len(skew)) if skew[i] == m]
+    Genome = 'TAAAGACTGCCGAGAGGCCAACACGAGTGCTAGAACGAGGGGCGTAAACGCGGGTCCGAT'
+  
+print (MinimumSkew(Genome))
+print (SkewArray(Genome))
