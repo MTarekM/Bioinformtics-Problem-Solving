@@ -23,7 +23,7 @@ def ProfileMostProbableKmer(text, k, profile):
             most_prob_kmer.append(key)
     return most_prob_kmer[0]
 
-def pr(text, profile):
+def Pr(text, profile):
     p = 1
     for i in range(len(text)):
         p = p * profile[text[i]][i]
