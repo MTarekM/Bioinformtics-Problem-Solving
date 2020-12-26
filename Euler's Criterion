@@ -1,0 +1,37 @@
+#!/bin/python3
+
+import os
+import sys
+
+# Complete the solve function below.
+def solve(a, m):
+    a=a % m
+    for x in range(2, m, 1): 
+        if ((x * x) % m == a): 
+            return True   
+    return False
+    #return y
+    
+
+
+    
+if __name__ == '__main__':
+    fptr =str(input())
+
+    
+    am = fptr.split()
+
+    a = int(am[0])
+
+    m = int(am[1])
+    t = int(m-1)
+
+    for t_itr in range(t):
+        
+        if solve(a, m) == True:
+            result = ("YES")            
+        else:
+            result=("NO")
+        
+    print(result)
+        
