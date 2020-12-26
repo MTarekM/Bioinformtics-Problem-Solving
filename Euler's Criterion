@@ -4,34 +4,37 @@ import os
 import sys
 
 # Complete the solve function below.
+
 def solve(a, m):
-    a=a % m
-    for x in range(2, m, 1): 
-        if ((x * x) % m == a): 
-            return True   
-    return False
+    if a == 0:
+        return "YES"
+    elif pow(a,int(m-1)//2 ,m) ==1: 
+            return "YES"
+    
+    return "NO"
     #return y
     
 
 
     
 if __name__ == '__main__':
-    fptr =str(input())
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    
-    am = fptr.split()
-
-    a = int(am[0])
-
-    m = int(am[1])
-    t = int(m-1)
+    t = int(input())
 
     for t_itr in range(t):
+        am = input().split()
+
+        a = int(am[0])
+
+        m = int(am[1])
+    
+        result = solve(a, m)
+
+        fptr.write(result + '\n')
         
-        if solve(a, m) == True:
-            result = ("YES")            
-        else:
-            result=("NO")
-        
-    print(result)
-        
+
+    fptr.close()
+
+
+    
